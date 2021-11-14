@@ -11,3 +11,6 @@ wav = open("music.wav", "rb")
 wav.seek(22)
 num_channels = struct.unpack('<h', wav.read(2))[0]
 sample_rate = int(struct.unpack('<l', wav.read(4))[0] * music_speed)
+
+wav.seek(34)
+bits_per_sample = struct.unpack('<h', wav.read(2))[0]
