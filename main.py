@@ -33,3 +33,8 @@ while data:
         bit = 0
     data = wav.read(sample_rate)
     bit += 1
+
+stream.stop_stream()
+stream.close()
+p.terminate()
+wav.close()
