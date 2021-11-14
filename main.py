@@ -6,8 +6,9 @@ from pyaudio import PyAudio
 
 MUSIC_SPEED = 1.1
 STOPING = (False, 100)
+FILE_NAME = "music.wav"
 
-wav = open("music.wav", "rb")
+wav = open(FILE_NAME, "rb")
 
 wav.seek(22)
 num_channels = struct.unpack('<h', wav.read(2))[0]
