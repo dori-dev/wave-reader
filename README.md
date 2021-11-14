@@ -25,3 +25,11 @@ python3 main.py
 - You can change `FILE_NAME` constant variable in `constant.py` to open different wav file.
 - You can change `MUSIC_SPEED` constant variable in `constant.py` to change music speed wav file.
 - You can change `STOPING` constant variable in `constant.py` to change stoping point wav file.
+
+#
+
+## Links
+
+Download Source Code: [Click Here](https://github.com/dori-dev/wave-reader/archive/refs/heads/main.zip)
+
+My Github Acount: [Click Here](https://github.com/dori-dev/)
