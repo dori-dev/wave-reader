@@ -1,12 +1,15 @@
 """main of wave reader project
 """
 
+# Standard library import
 import struct
+
+# Third party import
 from pyaudio import PyAudio
 
-MUSIC_SPEED = 1.1
-STOPING = (False, 100)
-FILE_NAME = "music.wav"
+# Local imports
+from constant import FILE_NAME, MUSIC_SPEED, STOPING
+
 
 wav = open(FILE_NAME, "rb")
 
