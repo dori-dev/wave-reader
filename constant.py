@@ -1,0 +1,2 @@
+"""Project constant variable
+"""
