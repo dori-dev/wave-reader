@@ -14,3 +14,11 @@ sample_rate = int(struct.unpack('<l', wav.read(4))[0] * music_speed)
 
 wav.seek(34)
 bits_per_sample = struct.unpack('<h', wav.read(2))[0]
+
+
+p = PyAudio()
+
+stream = p.open(format=p.get_format_from_width(bits_per_sample/8),
+                channels=num_channels,
+                rate=sample_rate,
+                output=True)
