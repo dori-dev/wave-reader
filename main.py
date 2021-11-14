@@ -17,19 +17,19 @@ bits_per_sample = struct.unpack('<h', wav.read(2))[0]
 
 audio = PyAudio()
 stream = audio.open(format=audio.get_format_from_width(bits_per_sample/8),
-                channels=num_channels,
-                rate=sample_rate,
-                output=True)
+                    channels=num_channels,
+                    rate=sample_rate,
+                    output=True)
 
 data = wav.read(sample_rate)
-bit = 0
+COUNT = 0
 while data:
     stream.write(data)
-    if STOPING[0] and bit == STOPING[1]:
+    if STOPING[0] and COUNT == STOPING[1]:
         wav.seek(34)
-        bit = 0
+        COUNT = 0
     data = wav.read(sample_rate)
-    bit += 1
+    COUNT += 1
 
 stream.stop_stream()
 stream.close()
